@@ -1,0 +1,32 @@
+﻿@using WebApplication6_20.web.Models
+@using WebApplication6_20.data
+@model IndexViewModel
+
+<a href="/home/AddFamily" class="btn btn-default">Add A New Family</a>
+<br />
+<br />
+<table class="table table-bordered table-striped">
+    <tr>
+        <td>Family Name</td>
+        <td>Number Of Kids</td>
+        <td>Is Chasidush</td>
+        <td>Type</td>
+    </tr>
+    @foreach(Family f in Model.Families)
+    {
+        <tr>
+            <td>@f.LastName</td>
+            <td>@f.Kids</td>
+            @if (f.IsChasidush)
+            {
+                <td><input disabled type="checkbox" checked/></td>
+            }
+            else
+            {
+                <td><input disabled type="checkbox" /></td>
+            }
+          
+            <td>@f.Type</td>
+        </tr>
+    }
+</table>

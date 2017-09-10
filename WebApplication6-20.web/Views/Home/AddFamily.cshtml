@@ -1,0 +1,19 @@
+﻿<form method="post" action="/home/AddFamily" style="margin-top:40px;">
+    <input type="text" class="form-control" name="LastName" placeholder="Last Name" />
+    <br />
+    <input type="number" class="form-control" name="Kids" placeholder="Number of kids"/>
+    <br />
+    <input type="checkbox" class="form-control isChasidush" name="IsChasidush" value="true"/>
+
+    <input hidden name="IsChasidush" value="false" />
+    <br />
+    <select  name="Type" class="form-control type"  >
+        <option selected value="Ashkenazi">Ashkenazi</option>
+        <option value="Sefardi">Sefardi</option>
+    </select>
+    <br />
+    <button class="btn btn-success">Add Family</button>
+</form>
+@section scripts{
+   <script src="~/Scripts/JavaScript.js"></script>
+    }
